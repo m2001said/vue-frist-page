@@ -43,7 +43,8 @@ body {
 nav {
   gap: 2rem;
   background: white;
-  padding: 5px;
+  padding: 1rem 0;
+  box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.3);
 }
 nav a {
   background: white;
