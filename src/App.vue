@@ -1,28 +1,58 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav class="flex">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+
+    <!-- to show routes in all pages -->
+    <router-view />
+    <!-- <SkillsTable /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import SkillsTable from "./components/Skills.vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+// export default {
+//   name: "App",
+//   components: {
+//     SkillsTable,
+//   },
+// };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+}
+body {
+  background: rgb(207, 179, 179);
+
+  margin: 0 auto;
+}
+.flex,
+.flex-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+nav {
+  gap: 2rem;
+  background: white;
+  padding: 5px;
+}
+nav a {
+  background: white;
+  color: gray;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+nav a:hover {
+  color: rgb(177, 153, 153);
 }
 </style>
